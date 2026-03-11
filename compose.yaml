@@ -1,9 +1,11 @@
-networks:
-  containers:
-    driver: bridge
 services:
   ping:
     build:
       context: .
+    hostname: ping
     networks:
       - containers
+networks:
+  containers:
+    name: containers
+    external: true
