@@ -1,0 +1,9 @@
+networks:
+  containers:
+    driver: bridge
+services:
+  ping:
+    build:
+      context: .
+    networks:
+      - containers
